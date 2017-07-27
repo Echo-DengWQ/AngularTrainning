@@ -1,0 +1,29 @@
+<button (click)="sortByAsccending()">正序排列</button>
+<button (click)="sortByDesccending()">倒序排列</button>
+<button (click)="sortByRadom()">随机打乱</button>
+<button (click)="deleteLast()">删除最后一个</button>
+<button (click)="saveNewUser()">新增一个</button>
+<table>
+  <tbody>
+    <tr>
+      <th>身份证号 </th>
+      <th>姓名 </th>
+      <th>学校 </th>
+      <th>院系 </th>
+      <th>准考证号 </th>
+      <th>考试时间 </th>
+      <th>总分 </th>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr *ngFor="let student of students">
+      <td>{{student.id}}</td>
+      <td>{{student.name}}</td>
+      <td>{{student.school}}</td>
+      <td>{{student.yuanxi}} </td>
+      <td>{{student.ksid}}</td>
+      <td>{{student.date}}</td>
+      <td>{{student.scroe}}</td>
+    </tr>
+  </tbody>
+</table>
